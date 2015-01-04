@@ -6,60 +6,40 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
 
 <head>
-	<title>Editing Information  &middot; Flakes Admin Framework</title>
+	<title>Search Report</title>
 
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-touch-fullscreen" content="yes">
 	<meta charset="UTF-8" />
 
-	<link rel="stylesheet" type="text/css" href="../static/flakes/css/all.css">
-	<link rel="stylesheet" type="text/css" href="../static/css/preview.css">
+	<link rel="stylesheet" type="text/css" href="css/all.css">
 </head>
 
-<body class="">
-
+<body>
 	<div class="flakes-frame">
 
 		<div class="flakes-navigation">
 			<a href="index.html" class="logo">
-				<img src="../static/flakes/img/logo.png" width="120">
+				<img src="img/logo.png" width="120">
 			</a>
 
 			<ul>
-				<li><a href="index.html">Getting Started</a></li>
-			</ul>
-
-			<ul>
-				<li class="title">Example Layouts</li>
-				<li><a href="dashboard.html">Dashboard</a></li>
-				<li><a href="browsing-data.html">Browsing Data</a></li>
-				<li><a href="information-display.html">Displaying Information</a></li>
-				<li><a href="editing-information.html">Adding/Editing Data</a></li>
-			</ul>
-
-			<ul>
-				<li class="title">Component Documentation</li>
-				<li><a href="grid.html">Simple Grid</a></li>
-				<li><a href="forms.html">Native Forms</a></li>
-				<li><a href="grid-forms.html">Grid Forms</a></li>
-				<li><a href="typography.html">Typography</a></li>
-				<li><a href="read-only-information.html">Read Only Information</a></li>
-				<li><a href="messaging.html">Messaging</a></li>
-				<li><a href="buttons.html">Buttons</a></li>
-				<li><a href="tables.html">Tables</a></li>
-				<li><a href="search-and-filters.html">Search & Filters</a></li>
-				<li><a href="frame-and-navigation.html">Frame & Navigation</a></li>
+				<li class="title">Menu</li>
+				<li><a href="#">Patient Record Search</a></li>
+				<li><a href="#">Population Search</a></li>
+				<li><a href="#">Custom Search Feature</a></li>
 			</ul>
 
 			<p class="foot">
-				Hello <b>John Doe</b><br>
-				<a href="" class="example-link">My Account</a> &bullet; <a href="" class="example-link">Logout</a>
+				Hello <b>Bobby Admin</b><br>
+				<a href="">SHS User Account</a> &bullet; <a href="">Logout</a>
 			</p>
 		</div>
 
-		<div class="flakes-content">
+	</div>
 
+	<div class = "flakes-content" style="height:782px;"></div>
 			<div class="flakes-mobile-top-bar">
 				<a href="" class="logo-wrap">
 					<img src="../static/flakes/img/logo.png" height="30px">
@@ -83,27 +63,27 @@
 				<fieldset>
 					<legend>Product Details</legend>
 					<div data-row-span="2">
-						<div data-field-span="1">
+						<div style="height: 60px;" data-field-span="1">
 							<label>Product Name</label>
 							<input type="text">
 						</div>
-						<div data-field-span="1">
+						<div style="height: 60px;" data-field-span="1">
 							<label>Tags</label>
 							<input type="text">
 						</div>
 					</div>
 					<div data-row-span="2">
-						<div data-field-span="1">
+						<div style="height: 60px;" data-field-span="1">
 							<label>Vendor</label>
 							<input type="text">
 						</div>
-						<div data-field-span="1">
+						<div style="height: 60px;" data-field-span="1">
 							<label>Product Type</label>
 							<input type="text">
 						</div>
 					</div>
 					<div data-row-span="1">
-						<div data-field-span="1">
+						<div style="height: 203px;" data-field-span="1">
 							<label>Product Description</label>
 							<textarea rows="6"></textarea>
 						</div>
@@ -116,31 +96,31 @@
 				<fieldset>
 					<legend>Product Specs</legend>
 					<div data-row-span="1">
-						<div data-field-span="1">
+						<div style="height: 60px;" data-field-span="1">
 							<label>SKU</label>
 							<input type="text">
 						</div>
 					</div>
 					<div data-row-span="1">
-						<div data-field-span="1">
+						<div style="height: 60px;" data-field-span="1">
 							<label>Initial Stock Level</label>
 							<input type="text">
 						</div>
 					</div>
 					<div data-row-span="1">
-						<div data-field-span="1">
+						<div style="height: 60px;" data-field-span="1">
 							<label>Cost Price</label>
 							<input type="text">
 						</div>
 					</div>
 					<div data-row-span="1">
-						<div data-field-span="1">
+						<div style="height: 60px;" data-field-span="1">
 							<label>Wholesale Price</label>
 							<input type="text">
 						</div>
 					</div>
 					<div data-row-span="1">
-						<div data-field-span="1">
+						<div style="height: 60px;" data-field-span="1">
 							<label>Retail Price</label>
 							<input type="text">
 						</div>
@@ -153,26 +133,18 @@
 	<br>
 	<a class="button-green bigger example-link">Add Product</a>
 
-			</div>
 		</div>
 	</div>
+</div>
+		
 
+	<link rel="stylesheet" type="text/css" href="bower_components/gridforms/gridforms/gridforms.css">
 
-	<link rel="stylesheet" type="text/css" href="../static/bower_components/prism/themes/prism.css">
-	<link rel="stylesheet" type="text/css" href="../static/bower_components/gridforms/gridforms/gridforms.css">
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/snapjs/snap.js"></script>
+	<script src="bower_components/responsive-elements/responsive-elements.js"></script>
+	<script src="bower_components/gridforms/gridforms/gridforms.js"></script>
 
-	<script src="../static/bower_components/jquery/dist/jquery.js"></script>
-	<script src="../static/bower_components/snapjs/snap.js"></script>
-	<script src="../static/bower_components/responsive-elements/responsive-elements.js"></script>
-	<script src="../static/bower_components/gridforms/gridforms/gridforms.js"></script>
-	<script src="../static/bower_components/prism/prism.js"></script>
-
-	<script src="../static/flakes/js/base.js"></script>
-	<script src="../static/flakes/js/utils.js"></script>
-	
-	
-
-	<script type="text/javascript" src="../static/js/preview.js"></script>
-
+	<script src="js/base.js"></script>
 </body>
 </html>
