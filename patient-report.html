@@ -6,7 +6,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
 
 <head>
-	<title>Search Report</title>
+	<title>FLEET Example Search</title>
 
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -17,134 +17,143 @@
 </head>
 
 <body>
+	<!--[if lt IE 7]>
+		<p class="chromeframe" style="background:#eee; padding:10px; width:100%">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
+	<![endif]-->
+
 	<div class="flakes-frame">
 
 		<div class="flakes-navigation">
-			<a href="index.html" class="logo">
+			<a href="home.html" class="logo">
 				<img src="img/logo.png" width="120">
 			</a>
 
 			<ul>
 				<li class="title">Menu</li>
-				<li><a href="#">Patient Record Search</a></li>
-				<li><a href="#">Population Search</a></li>
-				<li><a href="#">Custom Search Feature</a></li>
+				<li><a href="patient-search.html">Patient Record Search</a></li>
+				<li><a href="custom-search.html">Custom Search Feature</a></li>
 			</ul>
 
 			<p class="foot">
 				Hello <b>Bobby Admin</b><br>
-				<a href="">SHS User Account</a> &bullet; <a href="">Logout</a>
+				<a href="">SHS User Account</a> &bullet; <a href="home.html">Logout</a>
 			</p>
 		</div>
 
-	</div>
+		<div class="flakes-content">
 
-	<div class = "flakes-content" style="height:782px;"></div>
 			<div class="flakes-mobile-top-bar">
 				<a href="" class="logo-wrap">
-					<img src="../static/flakes/img/logo.png" height="30px">
+					<img src="img/logo.png" height="30px">
 				</a>
 
 				<a href="" class="navigation-expand-target">
-					<img src="../static/flakes/img/site-wide/navigation-expand-target.png" height="26px">
+					<img src="img/site-wide/navigation-expand-target.png" height="26px">
 				</a>
 			</div>
 
 			<div class="view-wrap">
 				
+	<h1>Search Result</h1>
 
-	<h1>Add Product</h1>
+	<p class="flakes-breadcrumbs">
+		<a href="patient-search.html">Patient</a> / <a href="patient-search.html">Reports</a> / <a href="patient-search.html">Custom</a>
+	</p>
 
-	<br>
+	<br><br>
 
 	<div class="grid-10 gutter-20">
 		<div class="span-7">
-			<form class="grid-form">
-				<fieldset>
-					<legend>Product Details</legend>
-					<div data-row-span="2">
-						<div style="height: 60px;" data-field-span="1">
-							<label>Product Name</label>
-							<input type="text">
-						</div>
-						<div style="height: 60px;" data-field-span="1">
-							<label>Tags</label>
-							<input type="text">
-						</div>
-					</div>
-					<div data-row-span="2">
-						<div style="height: 60px;" data-field-span="1">
-							<label>Vendor</label>
-							<input type="text">
-						</div>
-						<div style="height: 60px;" data-field-span="1">
-							<label>Product Type</label>
-							<input type="text">
-						</div>
-					</div>
-					<div data-row-span="1">
-						<div style="height: 203px;" data-field-span="1">
-							<label>Product Description</label>
-							<textarea rows="6"></textarea>
-						</div>
-					</div>
-				</fieldset>
-			</form>
+			<fieldset class="flakes-information-box">
+				<legend>Patient Details</legend>
+
+				<div class="grid-4">
+					<dl class="span-2">
+						<dt>Patient Name</dt>
+						<dd>Dave Folscomb</dd>
+					</dl>
+					<dl class="span-2">
+						<dt>Tags</dt>
+						<dd>CHF, DM</dd>
+					</dl>
+				</div>
+				<div class="grid-4">
+					<dl class="span-2">
+						<dt>MRN</dt>
+						<dd>6541816</dd>
+					</dl>
+					<dl class="span-2">
+						<dt>Readmit-Risk</dt>
+						<dd><b>4 - High</b></dd>
+					</dl>
+				</div>
+				<dl>
+					<dt>Problem List</dt>
+					<dd><b>Principal Problem:</b></dd>
+					<dd>Shortness of breath</dd>
+					<dd><b>Active Problems:</b></dd>
+					<dd>Chronic diastolic heart failure</dd>
+					<dd>Chronic airway obstruction</dd>
+					<dd>CAD (coronary artery disease).</dd>
+				</dl>
+			</fieldset>
 		</div>
 		<div class="span-3">
-			<form class="grid-form">
-				<fieldset>
-					<legend>Product Specs</legend>
-					<div data-row-span="1">
-						<div style="height: 60px;" data-field-span="1">
-							<label>SKU</label>
-							<input type="text">
-						</div>
-					</div>
-					<div data-row-span="1">
-						<div style="height: 60px;" data-field-span="1">
-							<label>Initial Stock Level</label>
-							<input type="text">
-						</div>
-					</div>
-					<div data-row-span="1">
-						<div style="height: 60px;" data-field-span="1">
-							<label>Cost Price</label>
-							<input type="text">
-						</div>
-					</div>
-					<div data-row-span="1">
-						<div style="height: 60px;" data-field-span="1">
-							<label>Wholesale Price</label>
-							<input type="text">
-						</div>
-					</div>
-					<div data-row-span="1">
-						<div style="height: 60px;" data-field-span="1">
-							<label>Retail Price</label>
-							<input type="text">
-						</div>
-					</div>
-				</fieldset>
-			</form>
+			<fieldset class="flakes-information-box">
+				<legend>Patient Specs</legend>
+				<dl>
+					<dt>DOB</dt>
+					<dd>23-MAR-1941</dd>
+				</dl>
+				<dl>
+					<dt>Balance</dt>
+					<dd>$314</dd>
+				</dl>
+				<dl>
+					<dt>Payor</dt>
+					<dd>BCBS-MA</dd>
+				</dl>
+				<dl>
+					<dt>Last Admit</dt>
+					<dd>09-JUN-14</dd>
+				</dl>
+				<dl>
+					<dt>Primary Contact</dt>
+					<dd>Dana Parks</dd>
+				</dl>
+			</fieldset>
 		</div>
 	</div>
 
 	<br>
-	<a class="button-green bigger example-link">Add Product</a>
+	<a class="button-darkblue">Send Report</a>
 
+			</div>
+	</div>
+
+			
+				
+
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
-		
 
-	<link rel="stylesheet" type="text/css" href="bower_components/gridforms/gridforms/gridforms.css">
 
-	<script src="bower_components/jquery/dist/jquery.js"></script>
-	<script src="bower_components/snapjs/snap.js"></script>
-	<script src="bower_components/responsive-elements/responsive-elements.js"></script>
-	<script src="bower_components/gridforms/gridforms/gridforms.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://getflakes.com/static/bower_components/prism/themes/prism.css">
+	<link rel="stylesheet" type="text/css" href="../static/bower_components/gridforms/gridforms/gridforms.css">
+
+	<script src="http://getflakes.com/static/bower_components/jquery/dist/jquery.js"></script>
+	<script src="js/snap.js"></script>
+	<script src="js/responsive-elements.js"></script>
+	<script src="js/gridforms.js"></script>
+	<script src="js/prism.js"></script>
 
 	<script src="js/base.js"></script>
+	
+	<script src="js/list.js"></script>
+
+	<script type="text/javascript" src="http://getflakes.com/static/js/preview.js"></script>
 </body>
 </html>
