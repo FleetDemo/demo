@@ -1,12 +1,6 @@
 <!doctype html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
-
 <head>
-	<title>FLEET Example Search</title>
+	<title>Learn</title>
 
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -15,12 +9,8 @@
 
 	<link rel="stylesheet" type="text/css" href="css/all.css">
 </head>
-
 <body>
-	<!--[if lt IE 7]>
-		<p class="chromeframe" style="background:#eee; padding:10px; width:100%">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
-	<![endif]-->
-
+	
 	<div class="flakes-frame">
 
 		<div class="flakes-navigation">
@@ -28,14 +18,9 @@
 				<img src="img/logo.png" width="120">
 			</a>
 
-			<ul>
-				<li class="title">Menu</li>
-				<li><a href="landing.html">Landing Page</a></li>
-			</ul>
 
 			<p class="foot">
-				Hello <b>Bobby Admin</b><br><br>
-				<a href="home.html">Logout</a>
+				Hello <b>Learner</b><br>
 			</p>
 		</div>
 
@@ -45,56 +30,68 @@
 				<a href="" class="logo-wrap">
 					<img src="img/logo.png" height="30px">
 				</a>
-
 				<a href="" class="navigation-expand-target">
 					<img src="img/site-wide/navigation-expand-target.png" height="26px">
 				</a>
 			</div>
 
 			<div class="view-wrap">
-				
-	<h1>SHS User Account</h1>
-
-	<p class="flakes-breadcrumbs">
-		<a href="landing.html">Accounts</a> / <a href="landing.html">User</a> / <a href="landing.html">Bobby Smith</a>
-	</p>
-
-	<br><br>
-
-	<div class="grid-10 gutter-20">
-		<div class="span-10">
+<!---------------------------------------------<-->
+<div class="grid-2 gutter-2">
+		<div class="span-2">
 			<fieldset class="flakes-information-box">
 				<legend>User Profile</legend>
-
 				<div class="grid-4">
 					<dl class="span-2">
-						<dt>User Name</dt>
-						<dd>Bobby Smith</dd>
+						<dt>User Name - Input</dt>
+						<dd ><input id="one" type="text" value="..."> </dd>
+						<p><button onclick="replaceById()"class="button-darkblue smaller">Update </button >
+						</p>
 					</dl>
 					<dl class="span-2">
-						<dt>privileges</dt>
-						<dd>User Level 2</dd>
-						<dd>Department Manager</dd>
-						<dd>PHI: Permitted</dd>
+						<dt>User Name - Updated</dt>
+						<dd id="two">Alice</dd>
+					
 					</dl>
 				</div>
-				<div class="grid-4">
-					<dl class="span-2">
-						<dt>Employee ID</dt>
-						<dd>CHA-458</dd>
-					</dl>
-					<dl class="span-2">
-						<dt>Department</dt>
-						<dd><b>Legal</b></dd>
-					</dl>
-				</div>
+	<button type="button" onclick="loadXMLDoc()">Request data</button>
+	<div id="myDiv">Test</div>
 			</fieldset>
 		</div>
 	</div>
+<script>
+function loadXMLDoc()
+{
+var xmlhttp;
 
-	<br>
-	<a href="landing.html"class="button-darkblue">Go Back</a>
+xmlhttp=new XMLHttpRequest();
 
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","http://fhirtest.uhn.ca/baseDstu1/DiagnosticOrder",true);
+xmlhttp.send();
+}
+</script>
+			
+<script>
+function replaceById() {	
+	var fruit = "asdasd";	
+	document.getElementById("one").innerHTML = fruit.length;
+	var input = document.getElementById("one").value;
+	var fruits = { banana: "yellow", lemon: "yellow", cherry: "red" };
+	var replacement = fruits.cherry;
+	document.getElementById("two").innerHTML = input;
+	}
+
+</script >
+	
+<!---------------------------------------------<-->
+	</form>
 			</div>
 	</div>
 
@@ -111,7 +108,6 @@
 	<link rel="stylesheet" type="text/css" href="http://getflakes.com/static/bower_components/prism/themes/prism.css">
 	<link rel="stylesheet" type="text/css" href="../static/bower_components/gridforms/gridforms/gridforms.css">
 
-	<script src="http://getflakes.com/static/bower_components/jquery/dist/jquery.js"></script>
 	<script src="js/snap.js"></script>
 	<script src="js/responsive-elements.js"></script>
 	<script src="js/gridforms.js"></script>
