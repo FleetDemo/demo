@@ -17,59 +17,77 @@
 			<a href="tester.html" class="logo">
 				<img src="img/logo.png" width="120">
 			</a>
-
-
 			<p class="foot">
 				Hello <b>Dev</b><br>
 			</p>
 		</div>
 
 		<div class="flakes-content">
-
-			<div class="flakes-mobile-top-bar">
-				<a href="" class="logo-wrap">
-					<img src="img/logo.png" height="30px">
-				</a>
-				<a href="" class="navigation-expand-target">
-					<img src="img/site-wide/navigation-expand-target.png" height="26px">
-				</a>
-			</div>
+		  <div class="flakes-mobile-top-bar">
+		    <a href="" class="logo-wrap">
+			  <img src="img/logo.png" height="30px"></a>
+			<a href="" class="navigation-expand-target">
+			  <img src="img/site-wide/navigation-expand-target.png" height="26px"></a>
+		  </div>
 
 			<div class="view-wrap">
-<!---------------------------------------------<-->
+<!----------------------------------------------->
 <div class="grid-2 gutter-2">
 		<div class="span-2">
 			<fieldset class="flakes-information-box">
-				<legend>Request</legend>
-				<div class="grid-4">
-				  <dl class="span-2">
-					<dt>GET url:</dt>
-						<dd ><input id="one" type="textarea" value="http://fhirtest.uhn.ca/baseDstu1/DiagnosticOrder"> </dd>
-						<br><button type="button" onclick="loadXMLDoc()" class="button-darkblue smaller">Sumbit Request</button>
-					</dl>
-				</div>	
+				<legend>Query Builder</legend>
+			<div class="grid-4">
+			  <dl class="span-2">
+					<dt>Test Server:</dt>
+					<select id="server" onChange='replaceById()'>
+							<option value=''>Select</option>
+						  <option value="http://fhirtest.uhn.ca/baseDstu1/">HAPI</option>
+						  <option value="http://spark.furore.com/server/">Furore</option>
+						  <option value="http://api.fhir.me/">SMART</option>
+						</select><p>
+					<dt>Resource Type</dt>
+					<select id="resource" onChange='replaceById()'>
+							<option value="Conformance">Conformance</option>
+						  <option value="Document">Document</option>
+						  <option value="Observation">Observation</option>
+						  <option value="Patient">Patient</option>
+						</select><p>
+					<dt>Further Details</dt>
+					  <dd ><input "servers" id="other" type="textarea" onChange='replaceById()' value=""><p>
+					<dt>URL submitted</dt>
+						<section id="request" contenteditable="true">
+						</section><p>			
+					<button type="button" onclick="loadXMLDoc()" class="button-darkblue smaller">Submit Request</button>
+					  
+			  </dl>
+			</div>	
 			</fieldset>
 			<fieldset class="flakes-information-box">
 				<legend>Response</legend>
-					<div id="myDiv">No Response</div>
+					<div id="response">No Response</div>
 			</fieldset>
 		</div>
 	</div>
 <script>
-function loadXMLDoc()
-{
-var xmlhttp;
-xmlhttp=new XMLHttpRequest();
-xmlhttp.onreadystatechange=function(){
-  if (xmlhttp.readyState==4 && xmlhttp.status==200){
-    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
-  } }
-xmlhttp.open("GET",document.getElementById("one").value,true);
-xmlhttp.send();
+function loadXMLDoc(){
+	var xmlhttp;
+	var request = document.getElementById("request").innerHTML;
+	xmlhttp=new XMLHttpRequest();
+	xmlhttp.onreadystatechange=function(){
+		if (xmlhttp.readyState==4 && xmlhttp.status==200){
+			document.getElementById("response").innerHTML=xmlhttp.responseText;
+			}  }
+	xmlhttp.open("GET",request,true);
+	xmlhttp.send();
+}
+function replaceById() {
+	var server = document.getElementById("server").value;
+	var resource = document.getElementById("resource").value;
+	var other = document.getElementById("other").value;
+	document.getElementById("request").innerHTML = server+resource+other;
 }
 </script>
 			
-	
 <!---------------------------------------------<-->
 	</form>
 			</div>
